@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="gama.healthcare.com.gamasurvey.SurveyActivity"
+    android:background="#F2F2F2"
+    android:layout_gravity="center"
+    >
+
+    <View
+        android:id="@+id/beam"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:background="@android:color/holo_blue_light"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@+id/ll_options"
+        app:layout_constraintBottom_toTopOf="@+id/ll_options"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/beam">
+        <TextView
+            android:id="@+id/tv_questionCounter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="2/8."
+            android:layout_marginEnd="10dp"
+            android:textColor="#6389F2"
+            android:textSize="35sp"
+            android:layout_marginRight="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_questionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#6389F2"
+            android:textSize="18sp"
+            tools:text="where in the world is carmen sandiego?"/>
+
+    </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/ll_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/cl_navigation"
+            android:layout_marginBottom="8dp"
+            android:visibility="visible"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/beam">
+
+           <RadioGroup
+               android:id="@+id/rg_radioGroup"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:visibility="visible">
+               <RadioButton
+                   android:id="@+id/rb_strong_dis"
+                   android:layout_width="120dp"
+                   android:layout_height="120dp"
+                   android:button="@drawable/trans"
+                   android:background="@drawable/strong_disagree_selector"
+                   />
+               <RadioButton
+                   android:id="@+id/rb_dis"
+                   android:layout_width="120dp"
+                   android:layout_height="120dp"
+                   android:button="@drawable/trans"
+                   android:background="@drawable/disagree_selector"
+                   />
+               <RadioButton
+                   android:id="@+id/rb_neut"
+                   android:layout_width="120dp"
+                   android:layout_height="120dp"
+                   android:button="@drawable/trans"
+                   android:background="@drawable/neutral_selector"
+                   />
+               <RadioButton
+                   android:id="@+id/rb_agr"
+                   android:layout_width="120dp"
+                   android:layout_height="120dp"
+                   android:button="@drawable/trans"
+                   android:background="@drawable/agree_selector"
+                   />
+               <RadioButton
+                   android:id="@+id/rb_strong_agr"
+                   android:layout_width="120dp"
+                   android:layout_height="120dp"
+                   android:button="@drawable/trans"
+                   android:background="@drawable/strong_agree_selector"
+                   />
+           </RadioGroup>
+
+        </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_answer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="@+id/ll_options"
+        app:layout_constraintTop_toTopOf="@+id/ll_options"
+        app:layout_constraintBottom_toBottomOf="@+id/ll_options"
+        app:layout_constraintLeft_toLeftOf="@+id/ll_options"
+        android:gravity="center"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cl_congrats"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="@+id/ll_options"
+        app:layout_constraintLeft_toLeftOf="@+id/ll_options"
+        app:layout_constraintBottom_toBottomOf="@+id/ll_options"
+        android:paddingLeft="20dp"
+        android:paddingStart="20dp"
+        android:paddingRight="20dp"
+        android:paddingEnd="20dp">
+
+        <ImageView
+            android:id="@+id/iv_happyface"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/happyface"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:text="Questionnaire Complete!"
+            android:textColor="#6389F2"
+            android:textSize="35sp"
+            app:layout_constraintLeft_toRightOf="@+id/iv_happyface"
+            app:layout_constraintStart_toEndOf="@+id/iv_happyface"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:text="Thank you for your feedback."
+            android:textColor="#6389F2"
+            android:textSize="18sp"
+            app:layout_constraintLeft_toRightOf="@+id/iv_happyface"
+            app:layout_constraintStart_toEndOf="@+id/iv_happyface"
+            app:layout_constraintTop_toBottomOf="@+id/tv_complete"/>
+
+
+        <Button
+            android:id="@+id/bt_exit"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/rounded_purp_button"
+            android:text="EXIT"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/iv_happyface"
+            app:layout_constraintStart_toEndOf="@id/iv_happyface"/>
+
+        <Button
+            android:id="@+id/bt_nextuser"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/rounded_purp_button"
+            android:text="NEXT USER"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/bt_exit"
+            app:layout_constraintStart_toEndOf="@id/bt_exit"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+
+<android.support.constraint.ConstraintLayout
+    android:id="@+id/cl_navigation"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    android:padding="20dp">
+
+    <Button
+        android:id="@+id/iv_prev"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/round_blue_button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="BACK"
+        android:textColor="@android:color/holo_blue_light"/>
+
+
+    <RatingBar
+        android:id="@+id/rb_ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_prev"
+        app:layout_constraintEnd_toStartOf="@+id/iv_next"
+        android:isIndicator="true"
+        style="@style/progressRatingBar"
+        tools:layout_editor_absoluteX="346dp"/>
+
+    <Button
+        android:id="@+id/iv_next"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/round_blue_button"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="NEXT"
+        android:textColor="@android:color/holo_blue_light"/>
+
+</android.support.constraint.ConstraintLayout>
+
+
+
+</android.support.constraint.ConstraintLayout>

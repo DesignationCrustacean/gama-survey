@@ -1,0 +1,67 @@
+{
+  "survey": [
+    {
+      "title": "Training Reaction Survey",
+      "questions": [
+        {
+          "question": "I learnt something from the training"
+        },
+        {
+          "question": "I enjoyed the training"
+        },
+        {
+          "question": "The training will help me improve my practice"
+        },
+        {
+          "question": "The training was delivered well"
+        },
+        {
+          "question": "The best part of the training was..."
+        },
+        {
+          "question": "The training could be improved by..."
+        }
+      ]
+    },
+    {
+      "title": "Behaviour Survey",
+      "questions": [
+        {
+          "question": "I feel that my cleaning has a part to play in patient safety"
+        },
+        {
+          "question": "I feel well-informed about undertaking my cleaning duties"
+        },
+        {
+          "question": "If I am not sure how to clean something I know who to ask"
+        },
+        {
+          "question": "I feel more confident in undertaking cleaning tasks"
+        },
+        {
+          "question": "Since the training I have thought more about how I clean"
+        }
+      ]
+    },
+    {
+      "title": "Outcomes Survey",
+      "questions": [
+        {
+          "question": "I never use a cloth on multiple surfaces"
+        },
+        {
+          "question": "I use cleaning materials more effectively following the training"
+        },
+        {
+          "question": "I clean more effectively following the training"
+        },
+        {
+          "question": "I have a better understanding of the part that cleaning has to play in reducing cross-infection"
+        },
+        {
+          "question": "My practice has changed after the training"
+        }
+      ]
+    }
+  ]
+}

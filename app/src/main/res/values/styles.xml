@@ -1,0 +1,17 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#F2F2F2</item>
+        <item name="colorPrimaryDark">#AAAAAA</item>
+        <item name="colorAccent">@android:color/holo_blue_light</item>
+    </style>
+
+    <style name="progressRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/progress</item>
+        <item name="android:minHeight">24dp</item>
+        <item name="android:maxHeight">64dp</item>
+    </style>
+
+</resources>
